@@ -1,16 +1,19 @@
 <template>
 <div>
-  <h1 >{{info}}</h1>
-  <input v-model="message" @keypress.enter="sendMessage()" type="text">
-  <li
-  v-for="data in datas" :key="data.name"
-  >
-  <!-- {{data}} -->
-  {{data.name}}
-  {{data.temperature}}
-  <!-- {{data.}} -->
-  <pre>{{datas}}</pre>
-  </li>
+  <div class="toCenter">
+    <h2>Enter a city and press enter to get it's weather info (city name has to be in english)</h2>
+    <input v-model="message" @keypress.enter="sendMessage()" type="text">
+    <div>
+      <ul class="datas">
+        <li>City : {{datas.name}}</li>
+        <li>Temperature : {{datas.temperature}}</li>
+        <li>{{datas.humidity}}</li>
+        <li>{{datas.time}}</li>
+      </ul>
+     
+    </div>
+  </div>
+  
 </div>
      
 

@@ -14,7 +14,7 @@ export default {
   }
 }
 </script>
+<style src="./assets/reset.css"></style>
+<style src="./assets/styles.css"></style>
 
-<style>
 
-</style>
