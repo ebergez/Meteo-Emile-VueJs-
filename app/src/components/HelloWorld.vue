@@ -3,7 +3,9 @@
   <div class="toCenter">
     <h2>Enter a city and press enter to get it's weather info (city name has to be in english)</h2>
     <input v-model="message" @keypress.enter="sendMessage()" type="text">
-    <div>
+    <div
+      v-for="data in datas" :key="data.name"
+    >
       <ul class="datas">
         <li>City : {{datas.name}}</li>
         <li>Temperature : {{datas.temperature}}</li>
