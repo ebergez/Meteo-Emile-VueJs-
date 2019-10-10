@@ -4,12 +4,42 @@
   <div class="toCenter">
     <input v-model="message" @keypress.enter="sendMessage()" type="text" placeholder="Paris">
   </div>
-      <ul class="datas" v-if="datas.length !== 0">
-        <li>City : {{datas.location.name}}</li>
-        <li>Temperature : {{datas.current.temperature}}</li>
-        <li>Humidity : {{datas.current.humidity}}</li>
-        <li>Observed at : {{datas.current.observation_time}}</li>
-      </ul>
+      <div class="datas" v-if="datas.length !== 0 && !datas.error">
+        <div class="dataSquares">
+          <div class="dataSquare">
+            <h3 class="squareTitle">Ville </h3>
+            <h4>{{datas.location.name}}</h4>
+
+          </div>
+          <div class="dataSquare">
+            <h3 class="squareTitle">Température </h3>
+            <h4>{{datas.current.temperature}}°C</h4>
+
+          </div>
+          <div class="dataSquare">
+            <h3 class="squareTitle">Ressenti </h3>
+            <h4>{{datas.current.feelslike}}°C</h4>
+
+          </div>
+          <div class="dataSquare">
+            <h3 class="squareTitle">Observée à </h3>
+            <h4>{{datas.current.observation_time}}</h4>
+
+          </div>
+          <div class="dataSquare">
+            <h3 class="squareTitle">Temps </h3>
+            <img :src="datas.current.weather_icons" alt="">
+          </div>
+          <div class="dataSquare">
+            <h3 class="squareTitle">Humidité </h3>
+            <h4>{{datas.current.humidity}}g/m3</h4>
+
+          </div>
+        </div>
+      </div>
+      <div v-if="datas.error">
+        <p>Need real city</p>
+      </div>
 
   
 </div>

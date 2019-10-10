@@ -26,3 +26,34 @@
     color: gray;
     
 }
+
+.datas {
+    height: 50vh;
+    margin-top: 10px;
+}
+
+.dataSquares{
+    display: flex;
+    justify-content: space-between;
+    margin-left: 3vw;
+    margin-right: 3vw;
+    flex-wrap: wrap;
+    margin-bottom: 50px;
+}
+
+.dataSquare {
+    width: 200px;
+    height: 200px;
+    margin-top: 20px;
+    border: black solid 1px;
+}
+
+.squareTitle {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    margin-top: 10px;
+    margin-left: 10px;
+    font-weight: bold;
+}
+
+
