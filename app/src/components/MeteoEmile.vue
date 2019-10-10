@@ -4,6 +4,13 @@
   <p class="question">De quel ville souhaiter vous connaitre la météo ?</p>
   <div class="toCenter">
     <input v-model="message" @keypress.enter="sendMessage()" type="text" placeholder="London (Nom de ville en anglais)">
+    
+  </div>
+  <div class="toCenterButtons">
+    <div class="centerButtons">
+      <button @click="addToFavorite()">Add to favorites</button>
+      <button @click="sendMessage()">Confirmer</button>
+    </div>
   </div>
       <div class="datas" v-if="datas.length !== 0 && !datas.error">
         <div class="dataSquares">
@@ -39,9 +46,9 @@
             </div>
           </div>
           <div class="dataSquare">
-            <h3 class="squareTitle">Humidité </h3>
+            <h3 class="squareTitle">Vent / Wind speed </h3>
             <div class="toCenterData">            
-              <h4>{{datas.current.humidity}}g/m3</h4>
+              <h4>{{datas.current.wind_speed}}km/h</h4>
             </div>
           </div>
         </div>
@@ -56,11 +63,14 @@
 
 <script>
 import axios from 'axios';
+import { type } from 'os';
 export default {
   data() {
     return {
       message : "",
-      datas: []
+      favorites: [],
+      datas: [],
+      
     };
   },
   methods: {
@@ -68,10 +78,13 @@ export default {
     this.response = []
     axios.get(`http://api.weatherstack.com/current?access_key=bee1004e26126f984fa45749fdd48453&query=${this.message}`)
     .then((response)=>{
-      console.log(response)
       this.datas = response.data
       this.message = ''
     })
+    },
+    addToFavorite(){
+      favorites.push(this.message);
+      console.log(favorites);
     }
   },
   mounted () {

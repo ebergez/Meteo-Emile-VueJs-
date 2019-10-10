@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <MeteoEmile msg=""/>
+    <MeteoEmile/>
   </div>
 </template>
 

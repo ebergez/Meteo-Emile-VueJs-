@@ -5,6 +5,25 @@
     margin-top: 10vh;
 }
 
+.toCenterButtons{
+    display: flex;
+    justify-content: center;
+}
+
+.centerButtons {
+    display: flex;
+    justify-self: center;
+    justify-content: center;
+    justify-content: space-evenly;
+    width: 300px;
+}
+
+button{
+    width: 100px;
+    padding: 5px;
+    margin: 20px;
+}
+
 .toCenter {
     display: flex;
     justify-content: center;
@@ -87,6 +106,10 @@ h4{
     text-align: center;
     font-family: Arial, Helvetica, sans-serif;
     color: skyblue;
+}
+
+button{
+    font-size: 12px;
 }
 
 @keyframes fadeInBottom {
