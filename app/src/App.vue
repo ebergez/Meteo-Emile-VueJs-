@@ -1,16 +1,16 @@
 <template>
   <div id="app">
-    <HelloWorld msg=""/>
+    <MeteoEmile msg=""/>
   </div>
 </template>
 
 <script>
-import HelloWorld from './components/HelloWorld.vue'
+import MeteoEmile from './components/MeteoEmile.vue'
 
 export default {
   name: 'app',
   components: {
-    HelloWorld
+    MeteoEmile
   }
 }
 </script>
