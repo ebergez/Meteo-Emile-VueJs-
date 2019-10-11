@@ -53,7 +53,7 @@
           <div class="dataSquare">
             <h3 class="squareTitle">Vent / Wind speed </h3>
             <div class="toCenterData">            
-              <h4>{{datas.current.wind_speed}} m/s</h4>
+              <h4>{{datas.current.wind_speed}} km/h</h4>
             </div>
           </div>
         </div>
